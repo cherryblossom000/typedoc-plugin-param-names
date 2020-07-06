@@ -22,4 +22,4 @@ Specifies the name to replace `__namedParameters` with.
 
 ## License
 
-[MIT](LICENSE) © 2020 cherryblossom000
+[MIT](LICENSE) Â© 2020 cherryblossom000
