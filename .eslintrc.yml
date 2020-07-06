@@ -1,0 +1,7 @@
+---
+root: true
+extends: ['@cherryblossom/eslint-config/ts']
+ignorePatterns: [dist]
+rules:
+  import/no-unused-modules: 0
+  import/prefer-default-export: 0
