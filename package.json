@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-param-names",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Change the name of __namedParameters",
   "keywords": [
     "typedoc",
