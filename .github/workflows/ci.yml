@@ -28,27 +28,28 @@ jobs:
         name: dist
         path: dist/
 
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    needs: test
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2-beta
-      with:
-        node-version: '12'
+# TODO: fix semantic-release
+  # release:
+  #   name: Release
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+  #   needs: test
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: actions/setup-node@v2-beta
+  #     with:
+  #       node-version: '12'
 
-    - name: Install
-      run: npm i -g pnpm && pnpm i
+  #   - name: Install
+  #     run: npm i -g pnpm && pnpm i
 
-    - name: Download build data
-      uses: actions/download-artifact@v2
-      with:
-        name: dist
+  #   - name: Download build data
+  #     uses: actions/download-artifact@v2
+  #     with:
+  #       name: dist
 
-    - name: Release
-      run: pnpx semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  #   - name: Release
+  #     run: pnpx semantic-release
+  #     env:
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
