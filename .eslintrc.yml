@@ -1,5 +1,5 @@
 root: true
-extends: ['@cherryblossom/eslint-config/ts']
+extends: ['@cherryblossom/eslint-config/ts/node']
 ignorePatterns: [dist/]
 rules:
   '@typescript-eslint/prefer-readonly-parameter-types': 0
