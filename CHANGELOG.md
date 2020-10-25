@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v1.0.2...v1.1.0) (2020-10-25)
+
+
+### Features
+
+* support `typedoc@0.19` (fixes [#2](https://github.com/cherryblossom000/typedoc-plugin-param-names/issues/2)) ([fc22ffb](https://github.com/cherryblossom000/typedoc-plugin-param-names/commit/fc22ffbbeb44eb2f64b0cf5fc0a59419e41b225e))
+
 ## [1.0.2](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v1.0.1...v1.0.2) (2020-08-12)
 
 
