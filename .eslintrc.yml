@@ -1,6 +1,9 @@
 root: true
 extends: ['@cherryblossom/eslint-config/ts/node']
-ignorePatterns: [dist/]
+reportUnusedDisableDirectives: true
+ignorePatterns:
+  - dist/
+  - test/
 rules:
   '@typescript-eslint/prefer-readonly-parameter-types': 0
   import/no-unused-modules: 0
