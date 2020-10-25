@@ -1,12 +1,10 @@
 {
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["es2020"],
     "target": "es2019",
     "module": "commonjs",
-    // "rootDir": "src",
     "outDir": "dist",
     "noImplicitReturns": true,
     "noUnusedLocals": true,

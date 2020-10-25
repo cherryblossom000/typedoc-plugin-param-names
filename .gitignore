@@ -5,3 +5,4 @@ tsconfig*.tsbuildinfo
 .history/
 dist/
 node_modules/
+test/docs/
