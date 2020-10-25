@@ -1,4 +1,3 @@
----
 plugins:
 - - '@semantic-release/changelog'
   - changelogTitle: '# Changelog'
