@@ -17,7 +17,7 @@ devDependencies:
   markdownlint-cli: 0.24.0
   prettier: 2.1.2
   semantic-release: 17.2.1
-  typedoc: 0.17.8_typescript@4.0.3
+  typedoc: 0.19.2_typescript@4.0.3
   typescript: 4.0.3
 lockfileVersion: 5.2
 packages:
@@ -2311,10 +2311,10 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
-  /highlight.js/10.1.1:
+  /highlight.js/10.3.1:
     dev: true
     resolution:
-      integrity: sha512-b4L09127uVa+9vkMgPpdUQP78ickGbHEQTWeBrQFTJZ4/n2aihWOGS0ZoUqAwjVmfjhq/C76HRzkqwZhK4sBbg==
+      integrity: sha512-jeW8rdPdhshYKObedYg5XGbpVgb1/DT4AHvDFXhkU7UnGSIjy9kkJ7zHG7qplhFHMitTSzh5/iClKQk3Kb2RFQ==
   /homedir-polyfill/1.0.3:
     dependencies:
       parse-passwd: 1.0.0
@@ -2968,10 +2968,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
-  /lunr/2.3.8:
+  /lunr/2.3.9:
     dev: true
     resolution:
-      integrity: sha512-oxMeX/Y35PNFuZoHp+jUj5OSEmLCaIH4KTFJh7a93cHBoFmpw2IoPs22VIz7vyO2YUnx2Tn9dzIwO2P/4quIRg==
+      integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==
   /macos-release/2.4.1:
     dev: true
     engines:
@@ -3063,13 +3063,6 @@ packages:
       marked: '>=0.4.0 <2.0.0'
     resolution:
       integrity: sha512-5KllfAOW02WS6hLRQ7cNvGOxvKW1BKuXELH4EtbWfyWgxQhROoMxEvuQ/3fTgkNjledR0J48F4HbapvYp1zWkQ==
-  /marked/1.0.0:
-    dev: true
-    engines:
-      node: '>= 8.16.2'
-    hasBin: true
-    resolution:
-      integrity: sha512-Wo+L1pWTVibfrSr+TTtMuiMfNzmZWiOPeO7rZsQUY5bgsxpHesBEcIWJloWVTFnrMXnf/TL30eTFSGJddmQAng==
   /marked/1.2.2:
     dev: true
     engines:
@@ -3914,7 +3907,7 @@ packages:
       integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
   /rechoir/0.6.2:
     dependencies:
-      resolve: 1.17.0
+      resolve: 1.18.1
     dev: true
     engines:
       node: '>= 0.10'
@@ -4740,35 +4733,34 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
-  /typedoc-default-themes/0.10.2:
-    dependencies:
-      lunr: 2.3.8
+  /typedoc-default-themes/0.11.4:
     dev: true
     engines:
       node: '>= 8'
     resolution:
-      integrity: sha512-zo09yRj+xwLFE3hyhJeVHWRSPuKEIAsFK5r2u47KL/HBKqpwdUSanoaz5L34IKiSATFrjG5ywmIu98hPVMfxZg==
-  /typedoc/0.17.8_typescript@4.0.3:
+      integrity: sha512-Y4Lf+qIb9NTydrexlazAM46SSLrmrQRqWiD52593g53SsmUFioAsMWt8m834J6qsp+7wHRjxCXSZeiiW5cMUdw==
+  /typedoc/0.19.2_typescript@4.0.3:
     dependencies:
-      fs-extra: 8.1.0
+      fs-extra: 9.0.1
       handlebars: 4.7.6
-      highlight.js: 10.1.1
-      lodash: 4.17.15
-      lunr: 2.3.8
-      marked: 1.0.0
+      highlight.js: 10.3.1
+      lodash: 4.17.20
+      lunr: 2.3.9
+      marked: 1.2.2
       minimatch: 3.0.4
       progress: 2.0.3
+      semver: 7.3.2
       shelljs: 0.8.4
-      typedoc-default-themes: 0.10.2
+      typedoc-default-themes: 0.11.4
       typescript: 4.0.3
     dev: true
     engines:
-      node: '>= 8.0.0'
+      node: '>= 10.0.0'
     hasBin: true
     peerDependencies:
-      typescript: '>=3.8.3'
+      typescript: 3.9.x || 4.0.x
     resolution:
-      integrity: sha512-/OyrHCJ8jtzu+QZ+771YaxQ9s4g5Z3XsQE3Ma7q+BL392xxBn4UMvvCdVnqKC2T/dz03/VXSLVKOP3lHmDdc/w==
+      integrity: sha512-oDEg1BLEzi1qvgdQXc658EYgJ5qJLVSeZ0hQ57Eq4JXy6Vj2VX4RVo18qYxRWz75ifAaYuYNBUCnbhjd37TfOg==
   /typescript/4.0.3:
     dev: true
     engines:
@@ -5000,5 +4992,5 @@ specifiers:
   markdownlint-cli: ^0.24.0
   prettier: ^2.1.2
   semantic-release: ^17.2.1
-  typedoc: ^0.17.8
+  typedoc: ^0.19.2
   typescript: ^4.0.3
