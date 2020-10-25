@@ -39,6 +39,13 @@ jobs:
       with:
         node-version: '12'
 
+    - uses: crazy-max/ghaction-import-gpg@v3
+      with:
+        gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+        passphrase: ${{ secrets.GPG_PASSPHRASE }}
+        git-user-signingkey: true
+        git-commit-gpgsign: true
+
     - name: Install
       run: npm i -g pnpm && pnpm i
 
