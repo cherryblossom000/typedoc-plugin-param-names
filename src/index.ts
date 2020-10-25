@@ -12,7 +12,11 @@ export const load = ({application}: PluginHost): void => {
     defaultValue: 'options'
   })
 
-  application.converter.on(Converter.EVENT_CREATE_PARAMETER, (_: Context, param: ParameterReflection) => {
-    if (param.name === '__namedParameters') param.name = application.options.getValue('param-name') as string
-  })
+  application.converter.on(
+    Converter.EVENT_CREATE_PARAMETER,
+    (_: Context, param: ParameterReflection) => {
+      if (param.name === '__namedParameters')
+        param.name = application.options.getValue('param-name') as string
+    }
+  )
 }

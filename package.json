@@ -40,21 +40,25 @@
     "typedoc": "<0.18"
   },
   "devDependencies": {
-    "@cherryblossom/eslint-config": "^4.0.2",
+    "@cherryblossom/eslint-config": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
-    "@typescript-eslint/parser": "^3.5.0",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.12.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^28.6.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.3",
     "eslint-plugin-node": "^11.1.0",
-    "markdownlint-cli": "^0.23.2",
-    "semantic-release": "^17.1.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "markdownlint-cli": "^0.24.0",
+    "prettier": "^2.1.2",
+    "semantic-release": "^17.2.1",
     "typedoc": "^0.17.8",
-    "typescript": "^3.9.6"
+    "typescript": "^4.0.3"
   }
 }
