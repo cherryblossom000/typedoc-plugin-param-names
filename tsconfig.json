@@ -2,13 +2,16 @@
   "include": ["src/**/*.ts"],
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["es2020"],
-    "target": "es2019",
+    "target": "ES2019",
     "module": "commonjs",
     "outDir": "dist",
+    "lib": ["ES2020"],
+    "allowUnreachableCode": false,
     "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "strict": true,
+    "useDefineForClassFields": true
   }
 }
