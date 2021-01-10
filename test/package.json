@@ -6,8 +6,8 @@
     "custom-name": "typedoc --param-name someOtherName --out docs/custom && open docs/custom/modules/_index_.html"
   },
   "devDependencies": {
-    "typedoc": "^0.19.2",
+    "typedoc": "^0.20.14",
     "typedoc-plugin-param-names": "file:..",
-    "typescript": "^4.0.3"
+    "typescript": "^4.1.3"
   }
 }
