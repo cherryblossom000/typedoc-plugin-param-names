@@ -42,7 +42,7 @@
     }
   },
   "peerDependencies": {
-    "typedoc": ">=0.15.5 <0.20"
+    "typedoc": ">=0.15.5 <0.21"
   },
   "devDependencies": {
     "@cherryblossom/eslint-config": "^13.0.0",
