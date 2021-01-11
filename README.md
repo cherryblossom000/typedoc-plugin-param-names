@@ -72,7 +72,6 @@ name would be used for all of them. If you want to disable this behaviour (for
 example if you have multiple destructured parameters that you have not
 documented), set `changeNamedParamTag` to `false`:
 
-
 ```ts
 /**
  * @param normalParameter abc
