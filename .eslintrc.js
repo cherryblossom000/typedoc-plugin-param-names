@@ -6,11 +6,15 @@ const config = {
   extends: ['@cherryblossom/eslint-config/node'],
   reportUnusedDisableDirectives: true,
   parserOptions: {
-    project: 'src/tsconfig.json',
-    tsconfigRootDir: __dirname,
+    project: [
+      './tsconfig.config.json',
+      './src/tsconfig.json',
+      './tests/tsconfig.json'
+    ],
+    tsconfigRootDir: __dirname
   },
   settings: {jsdoc: {mode: 'typescript'}},
-  ignorePatterns: ['dist/', 'test/', '.history/'],
+  ignorePatterns: ['.history/', 'dist/'],
   rules: {
     '@typescript-eslint/prefer-readonly-parameter-types': 0,
     'import/no-unused-modules': 0,

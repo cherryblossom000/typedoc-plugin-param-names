@@ -3,6 +3,7 @@
 pnpm-debug.log
 tsconfig*.tsbuildinfo
 .history/
+coverage/
 dist/
 node_modules/
 test/docs/
