@@ -1,5 +1,24 @@
 # Changelog
 
+# [2.0.0](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v1.2.0...v2.0.0) (2021-01-11)
+
+
+### Bug Fixes
+
+* fix TS error ([80eb585](https://github.com/cherryblossom000/typedoc-plugin-param-names/commit/80eb5853486e705b0a9cfc81236f94a4f8b6765d))
+
+
+### Features
+
+* detect param name from comments and change options ([6e5e465](https://github.com/cherryblossom000/typedoc-plugin-param-names/commit/6e5e4654fa2b7aeff5c366d39fdb60d5d183af06))
+* use application logger ([4cc0020](https://github.com/cherryblossom000/typedoc-plugin-param-names/commit/4cc0020c9c65de080fbeaedceb5e58d2f4cbad2f))
+
+
+### BREAKING CHANGES
+
+* The `param-name` option has been renamed to `namedParamName` and by default, the
+plugin will detect the name of parameters from the documentation comments.
+
 # [1.2.0](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v1.1.0...v1.2.0) (2021-01-10)
 
 
