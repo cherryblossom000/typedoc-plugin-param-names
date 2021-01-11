@@ -81,8 +81,8 @@ export const load = ({application}: PluginHost): void => {
     changeParamTag = application.options.getValue(changeParamTagOption)
 
     if (!changeParamTag && detectFromComments) {
-      console.warn(
-        `[param-names] ${changeParamTagOption} is ignored when ${detectFromCommentsOption} is true.`
+      application.logger.warn(
+        `${changeParamTagOption} is ignored when ${detectFromCommentsOption} is true`
       )
     }
   })
