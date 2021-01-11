@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "useDefineForClassFields": true
+  }
+}

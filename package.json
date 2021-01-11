@@ -24,8 +24,8 @@
     "lib": "./dist"
   },
   "scripts": {
-    "build": "tsc -d",
-    "build:dev": "tsc --sourceMap --incremental",
+    "build": "tsc -b",
+    "build:dev": "tsc -b tsconfig.dev.json",
     "watch": "pnpm run build:dev -- -w",
     "lint": "eslint --max-warnings 0 --ext .ts .",
     "lint:dev": "pnpm run lint -- --cache",

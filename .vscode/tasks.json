@@ -2,8 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "watch",
+      "label": "Watch",
+      "command": "pnpm",
+      "args": ["watch"],
       "isBackground": true,
       "presentation": {
         "reveal": "never"
