@@ -17,9 +17,9 @@ jobs:
       run: npm i -g pnpm && pnpm i
 
     - name: Lint
-      run: pnpm run lint && pnpm run lint:md
+      run: pnpm lint && pnpm lint:md
     - name: Build
-      run: pnpm run build
+      run: pnpm build
 
     - name: Upload build data
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
