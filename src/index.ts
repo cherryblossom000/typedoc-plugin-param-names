@@ -39,6 +39,8 @@ type KeyToDeclaration<
   : never
 
 declare module 'typedoc' {
+  // @ts-ignore Cannot redeclare exported variable 'Options'.
+  // This is just adding overloads to some methods and doesn't conflict with Options.
   class Options {
     addDeclaration<K extends keyof ParamNamesOptions>(
       declaration: KeyToDeclaration<K> & {name: K}
