@@ -5453,7 +5453,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
-  '@cherryblossom/eslint-config': ^13.0.0
+  '@cherryblossom/eslint-config': 13.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@commitlint/types': ^11.0.0
   '@semantic-release/changelog': ^5.0.1

@@ -45,7 +45,7 @@
     "typedoc": ">=0.15.5 <0.21"
   },
   "devDependencies": {
-    "@cherryblossom/eslint-config": "^13.0.0",
+    "@cherryblossom/eslint-config": "13.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/types": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
