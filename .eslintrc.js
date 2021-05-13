@@ -14,7 +14,6 @@ const config = {
     tsconfigRootDir: __dirname
   },
   settings: {jsdoc: {mode: 'typescript'}},
-  ignorePatterns: ['.history/', 'dist/'],
   rules: {
     '@typescript-eslint/prefer-readonly-parameter-types': 0,
     'import/no-unused-modules': 0,
