@@ -31,10 +31,10 @@ jobs:
         version: 6.3.0
         run_install: true
 
-    - name: Lint
-      run: pnpm lint:all
     - name: Build
       run: pnpm build
+    - name: Lint
+      run: pnpm lint:all
 
     - name: Upload build data
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
