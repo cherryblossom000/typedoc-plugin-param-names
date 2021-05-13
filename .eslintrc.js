@@ -18,7 +18,8 @@ const config = {
   rules: {
     '@typescript-eslint/prefer-readonly-parameter-types': 0,
     'import/no-unused-modules': 0,
-    'import/prefer-default-export': 0
+    'import/prefer-default-export': 0,
+    'unicorn/prefer-module': 0
   }
 }
 module.exports = config

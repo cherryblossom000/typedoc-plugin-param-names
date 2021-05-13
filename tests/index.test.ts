@@ -89,9 +89,10 @@ const convert = (
 const asReflectionType = (type: Type | undefined): ReflectionType | undefined =>
   type instanceof ReflectionType ? type : undefined
 
-const hasName = (name: string) => (
-  declaration: DeclarationReflection
-): boolean => declaration.name === name
+const hasName =
+  (name: string) =>
+  (declaration: DeclarationReflection): boolean =>
+    declaration.name === name
 
 const _testParam = (
   parameter: ParameterReflection | undefined,
