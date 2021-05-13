@@ -22,21 +22,20 @@ interface ParamNamesOptions {
   [changeParamTagOption]: boolean
 }
 
-type KeyToDeclaration<
-  K extends keyof ParamNamesOptions
-> = ParamNamesOptions[K] extends boolean
-  ? BooleanDeclarationOption
-  : ParamNamesOptions[K] extends string
-  ? StringDeclarationOption
-  : ParamNamesOptions[K] extends number
-  ? NumberDeclarationOption
-  : ParamNamesOptions[K] extends readonly string[]
-  ? ArrayDeclarationOption
-  : unknown extends ParamNamesOptions[K]
-  ? MixedDeclarationOption
-  : ParamNamesOptions[K] extends Readonly<Record<string, infer T>>
-  ? MapDeclarationOption<T>
-  : never
+type KeyToDeclaration<K extends keyof ParamNamesOptions> =
+  ParamNamesOptions[K] extends boolean
+    ? BooleanDeclarationOption
+    : ParamNamesOptions[K] extends string
+    ? StringDeclarationOption
+    : ParamNamesOptions[K] extends number
+    ? NumberDeclarationOption
+    : ParamNamesOptions[K] extends readonly string[]
+    ? ArrayDeclarationOption
+    : unknown extends ParamNamesOptions[K]
+    ? MixedDeclarationOption
+    : ParamNamesOptions[K] extends Readonly<Record<string, infer T>>
+    ? MapDeclarationOption<T>
+    : never
 
 declare module 'typedoc' {
   // @ts-ignore Cannot redeclare exported variable 'Options'.
@@ -52,16 +51,14 @@ declare module 'typedoc' {
 export const load = ({application}: PluginHost): void => {
   application.options.addDeclaration<typeof paramNameOption>({
     name: paramNameOption,
-    help:
-      'Specifies the name to replace __namedParameters with, if a @param tag isn’t found.',
+    help: 'Specifies the name to replace __namedParameters with, if a @param tag isn’t found.',
     type: ParameterType.String,
     defaultValue: 'options'
   })
 
   application.options.addDeclaration<typeof detectFromCommentsOption>({
     name: detectFromCommentsOption,
-    help:
-      'Whether to detect the name of parameters from the documentation comments.',
+    help: 'Whether to detect the name of parameters from the documentation comments.',
     type: ParameterType.Boolean,
     defaultValue: true
   })
