@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@cherryblossom/eslint-config': 14.1.0
+  '@cherryblossom/eslint-config': 14.1.1
   '@commitlint/config-conventional': ^12.1.4
   '@commitlint/types': ^12.1.4
   '@semantic-release/changelog': ^5.0.1
@@ -29,7 +29,7 @@ specifiers:
   typescript: ^4.2.4
 
 devDependencies:
-  '@cherryblossom/eslint-config': 14.1.0_e719f80d551ec3b485d76928d4e13a11
+  '@cherryblossom/eslint-config': 14.1.1_e719f80d551ec3b485d76928d4e13a11
   '@commitlint/config-conventional': 12.1.4
   '@commitlint/types': 12.1.4
   '@semantic-release/changelog': 5.0.1_semantic-release@17.4.3
@@ -281,8 +281,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@cherryblossom/eslint-config/14.1.0_e719f80d551ec3b485d76928d4e13a11:
-    resolution: {integrity: sha512-8TDgcA9p3vO3lmhB9wxbOBJVo3wJ/zHNciTalFTaNlI4sXpcHQVUkN3RkVvaQN9VzgWS+bMyz7Eds9EIBodHwA==}
+  /@cherryblossom/eslint-config/14.1.1_e719f80d551ec3b485d76928d4e13a11:
+    resolution: {integrity: sha512-MHVVIbRJqnoDLUuV96UAkn41vAa3EKJWcUckMeGqwbnxTBpsUSZp5/3nRRd/Xk90Kym4Tpj11WGRsNzpJhh80w==}
     engines: {node: ^10.13.0 || >=11.10.1}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^4.21
