@@ -7,14 +7,29 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12, 14, 16]
     steps:
+
     - uses: actions/checkout@v2.3.4
     - uses: actions/setup-node@v2.1.5
       with:
-        node-version: '12'
+        node-version: ${{ matrix.node }}
 
-    - name: Install
-      run: npm i -g pnpm && pnpm i
+    - name: Cache pnpm modules
+      uses: actions/cache@v2.1.5
+      env:
+        cache-name: cache-pnpm-modules
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-${{ hashFiles('**/package.json') }}
+        restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-
+
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 6.3.0
+        run_install: true
 
     - name: Lint
       run: pnpm lint:all
@@ -33,7 +48,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: test
+    env:
+      NODE_VERSION: 14
     steps:
+
     - uses: actions/checkout@v2.3.4
     - uses: actions/setup-node@v2.1.5
       with:
@@ -46,8 +64,19 @@ jobs:
         git-user-signingkey: true
         git-commit-gpgsign: true
 
-    - name: Install
-      run: npm i -g pnpm && pnpm i
+    - name: Cache pnpm modules
+      uses: actions/cache@v2.1.5
+      env:
+        cache-name: cache-pnpm-modules
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package.json') }}
+        restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.NODE_VERSION }}-
+
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 6.3.0
+        run_install: true
 
     - name: Download build data
       uses: actions/download-artifact@v2.0.9
