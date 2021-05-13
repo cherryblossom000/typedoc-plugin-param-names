@@ -8,7 +8,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - uses: actions/setup-node@v2.1.5
       with:
         node-version: '12'
@@ -23,7 +23,7 @@ jobs:
 
     - name: Upload build data
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2.2.3
       with:
         name: dist
         path: dist
@@ -34,12 +34,12 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: test
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - uses: actions/setup-node@v2.1.5
       with:
         node-version: '12'
 
-    - uses: crazy-max/ghaction-import-gpg@v3
+    - uses: crazy-max/ghaction-import-gpg@v3.1.0
       with:
         gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
         passphrase: ${{ secrets.GPG_PASSPHRASE }}
@@ -50,7 +50,7 @@ jobs:
       run: npm i -g pnpm && pnpm i
 
     - name: Download build data
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v2.0.9
       with:
         name: dist
         path: dist
