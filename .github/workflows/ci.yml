@@ -17,7 +17,7 @@ jobs:
       run: npm i -g pnpm && pnpm i
 
     - name: Lint
-      run: pnpm lint && pnpm lint:md
+      run: pnpm lint:all
     - name: Build
       run: pnpm build
 

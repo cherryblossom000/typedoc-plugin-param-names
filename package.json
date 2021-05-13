@@ -27,10 +27,11 @@
     "prepare": "husky install",
     "build": "tsc -b",
     "build:dev": "tsc -b tsconfig.dev.json",
-    "watch": "pnpm run build:dev -- -w",
+    "watch": "pnpm build:dev -- -w",
     "lint": "eslint --max-warnings 0 --ext .ts .",
-    "lint:dev": "pnpm run lint -- --cache",
-    "lint:md": "markdownlint ."
+    "lint:dev": "pnpm lint -- --cache",
+    "lint:md": "markdownlint .",
+    "lint:all": "pnpm lint && pnpm lint:md"
   },
   "config": {
     "commitizen": {
