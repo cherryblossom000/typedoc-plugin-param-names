@@ -79,7 +79,7 @@ jobs:
         run_install: true
 
     - name: Download build data
-      uses: actions/download-artifact@v2.0.9
+      uses: actions/download-artifact@v2.0.10
       with:
         name: dist
         path: dist
