@@ -38,7 +38,7 @@ jobs:
 
     - name: Upload build data
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      uses: actions/upload-artifact@v2.2.3
+      uses: actions/upload-artifact@v2.2.4
       with:
         name: dist
         path: dist
