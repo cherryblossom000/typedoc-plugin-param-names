@@ -41,7 +41,7 @@
     }
   },
   "peerDependencies": {
-    "typedoc": ">=0.15.5 <0.21"
+    "typedoc": "^21"
   },
   "devDependencies": {
     "@cherryblossom/eslint-config": "^14.3.1",
@@ -72,7 +72,7 @@
     "prettier": "^2.3.2",
     "semantic-release": "^17.4.4",
     "ts-jest": "^27.0.3",
-    "typedoc": "^0.20.36",
+    "typedoc": "^0.21.2",
     "typescript": "~4.2.4"
   }
 }

@@ -1,6 +1,6 @@
-import {ParameterType} from 'typedoc'
-import {Converter} from 'typedoc/dist/lib/converter'
+import {Converter, ParameterType} from 'typedoc'
 import type {
+  Application,
   ArrayDeclarationOption,
   BooleanDeclarationOption,
   MapDeclarationOption,
@@ -10,7 +10,6 @@ import type {
   StringDeclarationOption
 } from 'typedoc'
 import type {Context} from 'typedoc/dist/lib/converter'
-import type {PluginHost} from 'typedoc/dist/lib/utils'
 
 const paramNameOption = 'namedParamName'
 const detectFromCommentsOption = 'detectNamedParamFromComments'
@@ -48,22 +47,22 @@ declare module 'typedoc' {
   }
 }
 
-export const load = ({application}: PluginHost): void => {
-  application.options.addDeclaration<typeof paramNameOption>({
+export const load = (app: Application): void => {
+  app.options.addDeclaration<typeof paramNameOption>({
     name: paramNameOption,
     help: 'Specifies the name to replace __namedParameters with, if a @param tag isn’t found.',
     type: ParameterType.String,
     defaultValue: 'options'
   })
 
-  application.options.addDeclaration<typeof detectFromCommentsOption>({
+  app.options.addDeclaration<typeof detectFromCommentsOption>({
     name: detectFromCommentsOption,
     help: 'Whether to detect the name of parameters from the documentation comments.',
     type: ParameterType.Boolean,
     defaultValue: true
   })
 
-  application.options.addDeclaration<typeof changeParamTagOption>({
+  app.options.addDeclaration<typeof changeParamTagOption>({
     name: changeParamTagOption,
     help: `Whether to change the name of the @param tag to ${paramNameOption} so documentation is shown for a corresponding __namedParameters parameter. Ignored if ${detectFromCommentsOption} is true.`,
     type: ParameterType.Boolean,
@@ -74,19 +73,19 @@ export const load = ({application}: PluginHost): void => {
   let detectFromComments: boolean
   let changeParamTag: boolean
 
-  application.converter.on(Converter.EVENT_BEGIN, () => {
-    paramName = application.options.getValue(paramNameOption)
-    detectFromComments = application.options.getValue(detectFromCommentsOption)
-    changeParamTag = application.options.getValue(changeParamTagOption)
+  app.converter.on(Converter.EVENT_BEGIN, () => {
+    paramName = app.options.getValue(paramNameOption)
+    detectFromComments = app.options.getValue(detectFromCommentsOption)
+    changeParamTag = app.options.getValue(changeParamTagOption)
 
     if (!changeParamTag && detectFromComments) {
-      application.logger.warn(
+      app.logger.warn(
         `${changeParamTagOption} is ignored when ${detectFromCommentsOption} is true`
       )
     }
   })
 
-  application.converter.on(
+  app.converter.on(
     Converter.EVENT_CREATE_SIGNATURE,
     (_: Context, sig: SignatureReflection) => {
       if (!sig.parameters) return
