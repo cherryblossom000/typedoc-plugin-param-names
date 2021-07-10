@@ -1,6 +1,16 @@
 {
   "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "lib": [
+      "ES2019",
+      "ES2020.BigInt",
+      "ES2020.String",
+      "ES2020.Symbol.WellKnown"
+    ],
+
     "allowUnreachableCode": false,
+    "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
