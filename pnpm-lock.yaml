@@ -24,6 +24,7 @@ specifiers:
   eslint-plugin-promise: ^5.1.0
   eslint-plugin-unicorn: ^33.0.1
   husky: ^7.0.1
+  is-ci: ^3.0.0
   jest: ^27.0.6
   markdownlint-cli: ^0.27.1
   prettier: ^2.3.2
@@ -56,6 +57,7 @@ devDependencies:
   eslint-plugin-promise: 5.1.0_eslint@7.30.0
   eslint-plugin-unicorn: 33.0.1_eslint@7.30.0
   husky: 7.0.1
+  is-ci: 3.0.0
   jest: 27.0.6
   markdownlint-cli: 0.27.1
   prettier: 2.3.2
@@ -1885,6 +1887,10 @@ packages:
     resolution: {integrity: sha512-kdRWLBIJwdsYJWYJFtAFFYxybguqeF91qpZaggjG5Nf8QKdizFG2hjqvaTXbxFIcYbSaD74KpAXv6BSm17DHEQ==}
     dev: true
 
+  /ci-info/3.2.0:
+    resolution: {integrity: sha512-dVqRX7fLUm8J6FgHJ418XuIgDLZDkYcDFTeL6TA2gt5WlIZUQrrH6EZrNClwT/H0FateUsZkGIOPRrLbP+PR9A==}
+    dev: true
+
   /cjs-module-lexer/1.2.1:
     resolution: {integrity: sha512-jVamGdJPDeuQilKhvVn1h3knuMOZzr8QDnpk+M9aMlCaMkTDd6fBWPhiDqFvFZ07pL0liqabAiuy8SY4jGHeaw==}
     dev: true
@@ -3705,7 +3711,7 @@ packages:
     resolution: {integrity: sha512-kDXyttuLeslKAHYL/K28F2YkM3x5jvFPEw3yXbRptXydjD9rpLEz+C5K5iutY9ZiUu6AP41JdvRQwF4Iqs4ZCQ==}
     hasBin: true
     dependencies:
-      ci-info: 3.1.1
+      ci-info: 3.2.0
     dev: true
 
   /is-core-module/2.4.0:
