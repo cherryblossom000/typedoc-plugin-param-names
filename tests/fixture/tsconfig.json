@@ -1,6 +1,6 @@
 {
+  "include": ["index.ts"],
   "compilerOptions": {
-    "rootDir": "src",
     "module": "commonjs",
     "noEmit": true
   }

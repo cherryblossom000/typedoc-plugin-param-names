@@ -16,7 +16,7 @@ const paramNameOption = 'namedParamName'
 const detectFromCommentsOption = 'detectNamedParamFromComments'
 const changeParamTagOption = 'changeNamedParamTag'
 
-interface ParamNamesOptions {
+export interface ParamNamesOptions {
   [paramNameOption]: string
   [detectFromCommentsOption]: boolean
   [changeParamTagOption]: boolean

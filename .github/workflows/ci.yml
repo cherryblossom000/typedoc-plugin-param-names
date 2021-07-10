@@ -36,6 +36,8 @@ jobs:
       run: pnpm build
     - name: Lint
       run: pnpm lint:all
+    - name: Test
+      run: pnpm test
 
     - name: Upload build data
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
