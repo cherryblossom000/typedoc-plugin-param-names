@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v3.0.0...v3.0.1) (2021-07-11)
+
+
+### Bug Fixes
+
+* fix peer dependency range for typedoc ([1cb5a46](https://github.com/cherryblossom000/typedoc-plugin-param-names/commit/1cb5a4658071585d16e1ef42b1b38ecd76c00b2e))
+
 # [3.0.0](https://github.com/cherryblossom000/typedoc-plugin-param-names/compare/v2.0.0...v3.0.0) (2021-07-10)
 
 
