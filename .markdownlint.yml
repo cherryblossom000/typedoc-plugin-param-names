@@ -1,17 +1,17 @@
 default: true
-MD003:
+MD003: # Heading style
   style: atx
-MD004:
+MD004: # Unordered list style
   style: dash
-MD009:
+MD009: # Trailing spaces
   strict: true
-MD013:
+MD013: # Line length
   stern: true
-MD024:
+MD024: # Multiple headings with the same content
   siblings_only: true
-MD035:
+MD035: # Horizontal rule style
   style: ---
-MD046:
+MD046: # Code block style
   style: fenced
-MD048:
+MD048: # Code fence style
   style: backtick
