@@ -1,0 +1,5 @@
+globs:
+- '**/*.md'
+ignores:
+- CHANGELOG.md
+- node_modules/
