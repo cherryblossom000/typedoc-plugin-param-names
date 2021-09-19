@@ -30,7 +30,7 @@ specifiers:
   prettier: ^2.3.2
   semantic-release: ^17.4.7
   ts-jest: ^27.0.5
-  typedoc: ^0.21.9
+  typedoc: ^0.22.4
   typescript: ~4.4.2
 
 devDependencies:
@@ -63,7 +63,7 @@ devDependencies:
   prettier: 2.3.2
   semantic-release: 17.4.7
   ts-jest: 27.0.5_d6279bcaf6e2c6aa91a58343d133ee67
-  typedoc: 0.21.9_typescript@4.4.2
+  typedoc: 0.22.4_typescript@4.4.2
   typescript: 4.4.2
 
 packages:
@@ -4043,6 +4043,10 @@ packages:
       minimist: 1.2.5
     dev: true
 
+  /jsonc-parser/3.0.0:
+    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
+    dev: true
+
   /jsonfile/4.0.0:
     resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
     optionalDependencies:
@@ -4292,8 +4296,8 @@ packages:
     hasBin: true
     dev: true
 
-  /marked/3.0.2:
-    resolution: {integrity: sha512-TMJQQ79Z0e3rJYazY0tIoMsFzteUGw9fB3FD+gzuIT3zLuG9L9ckIvUfF51apdJkcqc208jJN2KbtPbOvXtbjA==}
+  /marked/3.0.4:
+    resolution: {integrity: sha512-jBo8AOayNaEcvBhNobg6/BLhdsK3NvnKWJg33MAAPbvTWiG4QBn9gpW1+7RssrKu4K1dKlN+0goVQwV41xEfOA==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: true
@@ -5249,10 +5253,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki/0.9.10:
-    resolution: {integrity: sha512-xeM7Oc6hY+6iW5O/T5hor8ul7mEprzyl5y4r5zthEHToQNw7MIhREMgU3r2gKDB0NaMLNrkcEQagudCdzE13Lg==}
+  /shiki/0.9.11:
+    resolution: {integrity: sha512-tjruNTLFhU0hruCPoJP0y+B9LKOmcqUhTpxn7pcJB3fa+04gFChuEmxmrUfOJ7ZO6Jd+HwMnDHgY3lv3Tqonuw==}
     dependencies:
-      json5: 2.2.0
+      jsonc-parser: 3.0.0
       onigasm: 2.2.5
       vscode-textmate: 5.2.0
     dev: true
@@ -5759,26 +5763,18 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typedoc-default-themes/0.12.10:
-    resolution: {integrity: sha512-fIS001cAYHkyQPidWXmHuhs8usjP5XVJjWB8oZGqkTowZaz3v7g3KDZeeqE82FBrmkAnIBOY3jgy7lnPnqATbA==}
-    engines: {node: '>= 8'}
-    dev: true
-
-  /typedoc/0.21.9_typescript@4.4.2:
-    resolution: {integrity: sha512-VRo7aII4bnYaBBM1lhw4bQFmUcDQV8m8tqgjtc7oXl87jc1Slbhfw2X5MccfcR2YnEClHDWgsiQGgNB8KJXocA==}
+  /typedoc/0.22.4_typescript@4.4.2:
+    resolution: {integrity: sha512-M/a8NnPxq3/iZNNVjzFCK5gu4m//HTJIPbSS0JQVbkHJPP9wyepR12agylWTSqeVZe0xsbidVtO26+PP7iD/jw==}
     engines: {node: '>= 12.10.0'}
     hasBin: true
     peerDependencies:
       typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x
     dependencies:
       glob: 7.1.7
-      handlebars: 4.7.7
       lunr: 2.3.9
-      marked: 3.0.2
+      marked: 3.0.4
       minimatch: 3.0.4
-      progress: 2.0.3
-      shiki: 0.9.10
-      typedoc-default-themes: 0.12.10
+      shiki: 0.9.11
       typescript: 4.4.2
     dev: true
 
